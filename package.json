@@ -1,0 +1,11 @@
+{
+  "name": "stremio-webos",
+  "version": "0.1.0",
+  "description": "Stremio for LG webOS",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "package": "bash scripts/package.sh"
+  }
+}
