@@ -9,6 +9,6 @@
   "largeIcon": "icon.png",
   "requiredPermissions": [
     "internet"
-  ]
+  ],
+  "supportContact": "https://github.com/TGiaDo/stremio-webos"
 }
-"supportContact": "https://github.com/TGiaDo/stremio-webos"
