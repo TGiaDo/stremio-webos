@@ -1,0 +1,41 @@
+name: Build webOS Package
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install webOS CLI
+        run: npm install -g @webos-tools/cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Stremio
+        run: npm run build
+
+      - name: Prepare package
+        run: |
+          mkdir package
+          cp -r app/* package/
+
+      - name: Package IPK
+        run: ares-package -n package
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stremio-webos-ipk
+          path: "*.ipk"

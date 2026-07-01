@@ -1,27 +1,39 @@
-# Stremio for LG webOS
+# Stremio webOS
 
-Unofficial webOS package of Stremio.
+Unofficial Stremio Web package for LG webOS TVs.
 
 ## Features
 
-- Runs on LG webOS
-- Homebrew compatible
-- Internet permission enabled
+- Stremio Web
+- Package as webOS app
+- Install through Homebrew Channel
+- Works on webOS 4.x+
+
+## Requirements
+
+- Node.js
+- webOS CLI
 
 ## Build
 
 ```bash
-git clone https://github.com/TGiaDo/stremio-webos.git
-cd stremio-webos
 npm install
 npm run build
+cp -r build/* app/
+chmod +x scripts/package.sh
 ./scripts/package.sh
+```
+
+Output:
+
+```
+org.stremio.webos_0.1.0_all.ipk
 ```
 
 ## Install
 
-Install the generated `.ipk` using Homebrew Channel.
+Install with
 
-## Tested on
-
-- LG webOS 4.0
+- Homebrew Channel
+- Developer Mode
+- ares-install
