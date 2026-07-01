@@ -6,5 +6,8 @@
   "title": "Stremio",
   "main": "index.html",
   "icon": "icon.png",
-  "largeIcon": "icon.png"
+  "largeIcon": "icon.png",
+  "requiredPermissions": [
+    "internet"
+  ]
 }

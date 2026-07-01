@@ -1,0 +1,13 @@
+{
+  "id": "org.stremio.webos",
+  "version": "0.1.0",
+  "vendor": "TGiaDo",
+  "type": "web",
+  "title": "Stremio",
+  "main": "index.html",
+  "icon": "icon.png",
+  "largeIcon": "icon.png",
+  "requiredPermissions": [
+    "internet"
+  ]
+}
