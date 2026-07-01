@@ -1,0 +1,17 @@
+# Node
+node_modules/
+
+# Build
+package/
+
+# Temporary
+*.log
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Generated package
+*.ipk

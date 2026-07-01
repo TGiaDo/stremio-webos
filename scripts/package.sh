@@ -2,17 +2,15 @@
 
 set -e
 
-echo "Cleaning old package..."
+echo "Cleaning..."
 rm -rf package
-
-echo "Creating package..."
 mkdir package
 
-echo "Copying app files..."
-cp -a app/. package/
+echo "Copying application..."
+cp -r app/* package/
 
 echo "Packaging..."
-ares-package package
+ares-package -n package
 
 echo ""
 echo "Done!"
