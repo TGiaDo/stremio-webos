@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
-echo "Cleaning..."
+echo "Cleaning package directory..."
 rm -rf package
 mkdir package
 
@@ -13,4 +13,4 @@ echo "Packaging..."
 ares-package -n package
 
 echo ""
-echo "Done!"
+echo "Done."
